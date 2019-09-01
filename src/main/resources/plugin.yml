@@ -1,0 +1,6 @@
+name: RPCommands
+version: ${project.version}
+main: ru.ibusewinner.spigot.free.rp.RPCommands
+api-version: 1.13
+authors: [iBuseWinner]
+description: RPCommands for your RP servers in Minecraft
