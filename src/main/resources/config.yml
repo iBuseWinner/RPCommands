@@ -1,0 +1,19 @@
+commands:
+  slap:
+    broadcast-message: "%prefix% &cИгрок &6%player% &cударил игрока %target%"
+    permission: "rpcommands.command.slap"
+    cooldown: 10
+    bypass-cooldown: "rpcommands.command.slap.bypass.cooldown"
+    cant-use: "%prefix% &4Вы не можете ударить этого игрока!"
+    cant-use-permission: "rpcommands.command.slap.bypass.use"
+    args-need: 1
+
+messages:
+  prefix: "&8[&aR&2P&eCommands&8]&7"
+  no-perm: "%prefix% &4У Вас недостаточно прав для использования данной команды!"
+  cooldown: "%prefix% &4Вы не можете использовать эту команду ещё &6%seconds% секунд&4!"
+  loadcfg: "%prefix% &9Конфиг успешно загружен и готов к работе!"
+  reloadcfg: "%prefix% &9Конфиг успешно перезагружен!"
+  player-only: "%prefix% &4Команда доступна только игрокам!"
+  no-args: "%prefix% &4Вы не указали нужное количество аргументов! Нужное количество: &6%args%"
+  player-cant-found: "%prefix% &4Игрок не найден!"

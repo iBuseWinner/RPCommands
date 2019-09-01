@@ -4,3 +4,8 @@ main: ru.ibusewinner.spigot.free.rp.RPCommands
 api-version: 1.13
 authors: [iBuseWinner]
 description: RPCommands for your RP servers in Minecraft
+
+commands:
+  rpcommands:
+    description: Главная команда плагина
+    aliases: [rp,rpcmds,rpcmd,rpc]
