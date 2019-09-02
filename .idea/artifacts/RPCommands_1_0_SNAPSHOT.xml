@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RPCommands-1.0-SNAPSHOT">
+    <output-path>$PROJECT_DIR$/out/artifacts/RPCommands_1_0_SNAPSHOT</output-path>
+    <root id="archive" name="RPCommands-1.0-SNAPSHOT.jar">
+      <element id="module-output" name="RPCommands" />
+    </root>
+  </artifact>
+</component>

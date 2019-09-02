@@ -10,7 +10,7 @@ import java.io.IOException;
 public final class RPCommands extends JavaPlugin {
 
     protected static FileConfiguration cfg;
-    private static RPCommands plugin;
+    protected static RPCommands plugin;
 
     @Override
     public void onEnable() {

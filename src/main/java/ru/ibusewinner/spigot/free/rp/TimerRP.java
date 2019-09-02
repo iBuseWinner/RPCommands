@@ -6,12 +6,6 @@ import java.util.UUID;
 
 public class TimerRP {
 
-    private static RPCommands main;
-
-    public TimerRP(RPCommands plugin) {
-        main = plugin;
-    }
-
     public static void timer() {
         new BukkitRunnable() {
 
@@ -30,7 +24,7 @@ public class TimerRP {
                 }
             }
 
-        }.runTaskTimer(main, 0, 20);
+        }.runTaskTimer(RPCommands.plugin, 0, 20);
     }
 
 }

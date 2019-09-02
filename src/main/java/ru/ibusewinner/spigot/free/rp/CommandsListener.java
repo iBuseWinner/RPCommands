@@ -29,9 +29,9 @@ public class CommandsListener implements Listener {
                     return;
                 }
 
-                int args_count = 1+RPCommands.getInstance().getInt("commands."+key+".args-need");
+                int args_count = RPCommands.getInstance().getInt("commands."+key+".args-need");
 
-                if(args.length != args_count) {
+                if(args.length != args_count+1) {
                     p.sendMessage(RPCommands.getInstance().getStr("messages.no-args")
                             .replaceAll("%args%", String.valueOf(args_count)));
                     e.setCancelled(true);
@@ -50,24 +50,24 @@ public class CommandsListener implements Listener {
                 try {
                     Player target = Bukkit.getPlayer(args[1]);
 
-                    if(target.hasPermission("rpcommands.command.slap.bypass.use")) {
-                        p.sendMessage(RPCommands.getInstance().getStr("settings."+key+".cant-use"));
+                    if(target.hasPermission(RPCommands.getInstance().getStr("commands."+key+".cant-use-permission"))) {
+                        p.sendMessage(RPCommands.getInstance().getStr("commands."+key+".cant-use"));
                         e.setCancelled(true);
                         return;
                     }
 
                     String target_name = target.getName();
 
-                    int cooldown = RPCommands.getInstance().getInt("settings."+key+".cooldown");
+                    int cooldown = RPCommands.getInstance().getInt("commands."+key+".cooldown");
 
-                    if(!p.hasPermission(RPCommands.getInstance().getStr("settings."+key+".bypass-cooldown"))) {
+                    if(!p.hasPermission(RPCommands.getInstance().getStr("commands."+key+".bypass-cooldown"))) {
                         cd.put(p.getUniqueId(), cooldown);
                     }
 
                     Bukkit.broadcastMessage(RPCommands.getInstance().getStr("settings."+key+".broadcast-message")
                             .replaceAll("%player%", name).replaceAll("%target%", target_name));
                 } catch(Exception ex) {
-                    p.sendMessage(RPCommands.getInstance().getStr("messages.player-not-found"));
+                    p.sendMessage(RPCommands.getInstance().getStr("messages.player-cant-found"));
                 }
 
                 e.setCancelled(true);
